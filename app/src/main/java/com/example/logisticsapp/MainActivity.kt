@@ -22,6 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             val navController = rememberNavController()
             AppNavHost(navController = navController)
+            // Checking github push
         }
     }
 }
