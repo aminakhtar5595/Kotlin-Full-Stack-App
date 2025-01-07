@@ -111,7 +111,7 @@ fun LoginScreen(navController: NavHostController) {
 
             Spacer(modifier = Modifier.height(24.dp)) // Spacing before the button
 
-            Button(onClick = {  },
+            Button(onClick = { submit(phone, password, navController) },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0xFFE95F25),
                     contentColor = Color.White
@@ -128,4 +128,11 @@ fun LoginScreen(navController: NavHostController) {
         }
 
     }
+}
+
+fun submit (phone: String, password: String, navController: NavHostController) {
+    println("Phone: $phone")
+    println("Password: $password")
+
+    navController.navigate("home")
 }

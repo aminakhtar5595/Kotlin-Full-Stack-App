@@ -2,6 +2,7 @@ package com.example.logisticsapp.screens
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -14,6 +15,28 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun HomeScreen(navController: NavHostController) {
+
+    val data = listOf(
+        mapOf(
+            "id" to 1,
+            "name" to "Route 1",
+            "date" to "7th Jan, 2025",
+            "status" to "Route In Transit"
+        ),
+        mapOf(
+            "id" to 2,
+            "name" to "Route 2",
+            "date" to "8th Jan, 2025",
+            "status" to "Route In Transit"
+        ),
+        mapOf(
+            "id" to 3,
+            "name" to "Route 3",
+            "date" to "9th Jan, 2025",
+            "status" to "Route In Transit"
+        )
+    )
+    
     Column(
         modifier = Modifier
             .padding(vertical = 20.dp) // Vertical margin for the entire screen

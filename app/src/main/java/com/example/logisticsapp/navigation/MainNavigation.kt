@@ -9,7 +9,7 @@ import com.example.logisticsapp.screens.SplashScreen
 
 @Composable
 fun AppNavHost(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = "splash") {
+    NavHost(navController = navController, startDestination = "home") {
         composable("splash") { SplashScreen(navController) }
         composable("login") { LoginScreen(navController) }
         composable("home") { HomeScreen(navController) }
